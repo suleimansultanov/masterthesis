@@ -1,0 +1,15 @@
+Unzip the CONTENTS of this archive directly into your local clone of
+  https://github.com/suleimansultanov/masterthesis
+(the folder that already contains ThesisFinalVersionToSend.pdf etc.)
+
+It adds:
+  Drafts/      Chapter 1 (Introduction) + Chapter 2 (Literature Review) .docx, plus build scripts
+  Literature/  Annotated_Bibliography.md + thesis_references.bib
+  code/        baselines_code/ (SVM baselines + experiment harness)
+  .gitignore
+
+Then:
+  cd /path/to/masterthesis
+  git add .
+  git commit -m "Add Introduction & Literature Review drafts, bibliography, baseline code"
+  git push origin main
