@@ -50,6 +50,9 @@ def parse_args():
     p.add_argument("--include-proposed", action="store_true",
                    help="Also try the proposed model stub (will be skipped "
                         "until its fit() is implemented).")
+    p.add_argument("--max-samples", type=int, default=5000,
+                   help="Stratified subsample cap for real datasets "
+                        "(keeps the precomputed-kernel SVM tractable).")
     return p.parse_args()
 
 
@@ -68,7 +71,7 @@ def main():
             random_state=args.seed,
         )
     else:
-        ds = load_dataset(args.dataset)
+        ds = load_dataset(args.dataset, max_samples=args.max_samples)
     print(ds.summary())
 
     # ---- Register models ----

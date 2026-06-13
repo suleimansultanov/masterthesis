@@ -1,0 +1,8 @@
+# datasets (downloaded locally, do NOT commit)
+code/baselines_code/data/
+**/data/opportunity/
+**/data/casas/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
